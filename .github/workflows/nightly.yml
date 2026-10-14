@@ -137,7 +137,7 @@ jobs:
           # full-tournament journeys run on WebKit and Firefox too, at least once a day
           # (#226).
           DUELBOX_ALL_ENGINES: '1'
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: failure()
         with:
           # Per shard: three jobs uploading one name is a collision, and the shard in the
@@ -268,7 +268,7 @@ jobs:
       # Published whether or not the thresholds held. A report you can only see when the run
       # is green tells you nothing on the morning you need it: the failure message names the
       # axis that dropped, and this names the files.
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: coverage
@@ -306,7 +306,7 @@ jobs:
           DUELBOX_RESPONSIVE_SWEEP: '1'
       # The failure names the game, the viewport and the control, so the log is the record.
       # The report is for the run where a trace is wanted.
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: failure()
         with:
           name: responsive-sweep-report
@@ -348,7 +348,7 @@ jobs:
           DUELBOX_SOAK: '1'
       # The numbers are printed by the spec on every run, pass or fail, so the log is the
       # record. The report is for the run where the trace matters.
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: failure()
         with:
           name: soak-report
